@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a192f;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #64ffda;
+            box-shadow: 0 0 15px #64ffda;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #64ffda;
+        }
+
+        .bio {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin: 10px auto;
+            color: #ccd6f6;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #64ffda;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="avatar.jpg" alt="Avatar" class="avatar">
+        <div class="name">Tên Của Bạn</div>
+        <div class="bio">Lập trình viên đam mê công nghệ, yêu thích sáng tạo và không ngừng học hỏi.</div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.container').css({
+                transform: 'translateY(-50px)',
+                opacity: 0
+            }).animate({
+                transform: 'translateY(0)',
+                opacity: 1
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
